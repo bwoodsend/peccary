@@ -1,4 +1,5 @@
 import json
+import os
 import uuid
 from http.server import BaseHTTPRequestHandler
 from http import HTTPStatus
@@ -61,7 +62,9 @@ class Scene:
                 pass
 
         with socketserver.TCPServer(("", 0), Handler) as httpd:
-            webbrowser.open("http://{}:{}".format(*httpd.socket.getsockname()))
+            host, port = httpd.socket.getsockname()
+            host = "localhost" if os.name == "nt" else host
+            webbrowser.open("http://{}:{}".format(host, port))
             try:
                 httpd.serve_forever()
             except KeyboardInterrupt:
