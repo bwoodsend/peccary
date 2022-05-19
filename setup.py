@@ -24,7 +24,13 @@ setup(
     "A mind-numbingly simple wrapper around the plotly javascript library.",
     install_requires=[],
     extras_require={
-        "test": ['pytest>=3', 'pytest-order', 'coverage', 'pytest-cov']
+        "test": [
+            'pytest>=3',
+            'pytest-order',
+            'coverage',
+            'pytest-cov',
+            'requests',
+        ]
     },
     license="MIT license",
     long_description=readme,
