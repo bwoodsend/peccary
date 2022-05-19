@@ -19,7 +19,7 @@ To install peccary, run the following in your terminal:
 
 .. code-block:: console
 
-    pip install "git+ssh://git@github.com/bwoodsend/peccary.git"
+    pip install "git+https://github.com/bwoodsend/peccary.git"
 
 
 Usage
